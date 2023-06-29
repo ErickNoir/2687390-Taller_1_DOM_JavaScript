@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 6 - JavaScript</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/cardsAndModals.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navBar">
+            <h1 class="tittle">Retos de JavaScript</h1>
+    <div class="Options">
+            <a href="../index.html" class="letterNAV barOptions"><b>Inicio</b></a>
+    </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <br> <br> <br>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Reto 6</h2>
+            Desarrolle un programa que muestre las cuatro figuras geométricas básicas (círculo, triángulo, rectángulo, cuadrado) mediante cards con dos botones Perímetro y Área. Según la elección del usuario desplegar una ventana modal que permita ingresar los datos necesarios para calcular dicha operación, acorde a la figura seleccionada, esta debe incluir un botón Calcular que mostrará el resultado de la operación y un botón Cerrar que cierra la ve tana modal.
+        </div>
+        <div class="col-md-6">
+            <h5>Calcular figura</h5>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="cards">
+                        <div class="circulo"></div>
+                        <div class="container">
+                            <button class="button2" onclick="openCircleAreaModal()">Calcular área</button>
+                            <button class="button2" onclick="openCirclePerimeterModal()">Calcular perímetro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br> <br> <br>
+
+                <div class="col-md-6">
+
+                    <div class="cards">
+                        <div class="triangulo"></div>
+                        <div class="container">
+                            <button class="button2" onclick="openTriangleAreaModal()">Calcular área</button>
+                            <button class="button2" onclick="openTrianglePerimeterModal()">Calcular perímetro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br> <br> <br> 
+
+                <div class="col-md-6">
+
+                    <div class="cards">
+                        <div class="rectangulo"></div>
+                        <div class="container">
+                            <button class="button2" onclick="openRectangleAreaModal()">Calcular área</button>
+                            <button class="button2" onclick="openRectanglePerimeterModal()">Calcular perímetro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br> <br> <br>
+
+                <div class="col-md-6">
+
+                    <div class="cards">
+                        <div class="cuadrado"></div>
+                        <div class="container">
+                            <button class="button2" onclick="openSquareAreaModal()">Calcular área</button>
+                            <button class="button2" onclick="openSquarePerimeterModal()">Calcular perímetro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Ventana modal del circulo-->
+    <div id="modalWindowCircleArea" class="modalWindowCircleArea">
+        <div class="modalContent">
+            <h3>Calcular área</h3>
+            <h6>Ingrese el radio del circulo:</h6>
+            <input type="number" id="radiusArea">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5CirleArea"></div>
+
+            <button class="button2" onclick="calculateCircleArea()">Calcular</button>
+            <button class="button2" onclick="closeCircleArea()">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalWindowCirclePerimeter" class="modalWindowCirclePerimeter">
+        <div class="modalContent">
+            <h3>Calcular perímetro</h3>
+            <h6>Ingrese el radio del circulo:</h6>
+            <input type="number" id="radiusPerimeter">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5CirclePerimeter"></div>
+
+            <button class="button2" onclick="calculateCirclePerimeter()">Calcular</button>
+            <button class="button2" onclick="closeCirclePerimeter()">Cerrar</button>
+        </div>
+    </div>
+
+
+
+    <!--Ventana modal del triangulo-->
+    <div id="modalWindowTriangleArea" class="modalWindowTriangleArea">
+        <div class="modalContent">
+            <h3>Calcular área</h3>
+            <h6>Ingrese la base del triangulo:</h6>
+            <input type="number" id="baseArea">
+            <h6>Ingrese la altura del triangulo:</h6>
+            <input type="number" id="heightArea">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5TriangleArea"></div>
+
+            <button class="button2" onclick="calculateTriangleArea()">Calcular</button>
+            <button class="button2" onclick="closeTriangleArea()">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalWindowTrianglePerimeter" class="modalWindowTrianglePerimeter">
+        <div class="modalContent">
+            <h3>Calcular Perimetro</h3>
+            <h6>Ingrese uno de los lados del triangulo:</h6>
+            <input type="number" id="side1Triangle">
+            <h6>Ingrese uno de los lados del triangulo:</h6>
+            <input type="number" id="side2Triangle">
+            <h6>Ingrese uno de los lados del triangulo:</h6>
+            <input type="number" id="side3Triangle">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5TrianglePerimeter"></div>
+
+            <button class="button2" onclick="calculateTrianglePerimeter()">Calcular</button>
+            <button class="button2" onclick="closeTrianglePerimeter()">Cerrar</button>
+        </div>
+    </div>
+    
+
+
+    <!--Ventana modal del rectangulo-->
+    <div id="modalWindowRectangleArea" class="modalWindowRectangleArea">
+        <div class="modalContent">
+            <h3>Calcular área</h3>
+            <h6>Ingrese el largo del rectangulo:</h6>
+            <input type="number" id="side1RectangleArea">
+            <h6>Ingrese el ancho del rectangulo:</h6>
+            <input type="number" id="side2RectangleArea">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5RectangleArea"></div>
+
+            <button class="button2" onclick="calculateRectangleArea()">Calcular</button>
+            <button class="button2" onclick="closeRectangleArea()">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalWindowRectanglePerimeter" class="modalWindowRectanglePerimeter">
+        <div class="modalContent">
+            <h3>Calcular perímetro</h3>
+            <h6>Ingrese el largo del rectangulo:</h6>
+            <input type="number" id="side1RectanglePerimeter">
+            <h6>Ingrese el ancho del rectangulo:</h6>
+            <input type="number" id="side2RectanglePerimeter">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5RectanglePerimeter"></div>
+
+            <button class="button2" onclick="calculateRectanglePerimeter()">Calcular</button>
+            <button class="button2" onclick="closeRectanglePerimeter()">Cerrar</button>
+        </div>
+    </div>
+
+
+
+    <!--Ventana modal del cuadrado-->
+    <div id="modalWindowSquareArea" class="modalWindowSquareArea">
+        <div class="modalContent">
+            <h3>Calcular área</h3>
+            <h6>Ingrese una de las caras del cuadrado:</h6>
+            <input type="number" id="side1SquareArea">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5SquareArea"></div>
+
+            <button class="button2" onclick="calculateSquareArea()">Calcular</button>
+            <button class="button2" onclick="closeSquareArea()">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalWindowSquarePerimeter" class="modalWindowSquarePerimeter">
+        <div class="modalContent">
+            <h3>Calcular perímetro</h3>
+            <h6>Ingrese una de las caras del cuadrado:</h6>
+            <input type="number" id="side1SquarePerimeter">
+
+            <h5>Resultado:</h5>
+            <div id="resultField5SquarePerimeter"></div>
+
+            <button class="button2" onclick="calculateSquarePerimeter()">Calcular</button>
+            <button class="button2" onclick="closeSquareePerimeter()">Cerrar</button>
+        </div>
+    </div>
+
+
+
+
+<script src="../js/Retos.js"></script>
+
+<br> <br> <br> <br> <br>
+
+<footer class="bg-dark text-center text-white" >
+    <div class=" p-4 pb-0" style="background-color: #68270b">
+
+    </div>
+    <div class="text-center p-3" style="background-color:#4c000c"> 
+    © 2023 Copyright:
+        <a class="text-white" href="Index.html">Retos de JavaScript</a>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!-- <input type="number" id="campoReto3" onchange="#()">

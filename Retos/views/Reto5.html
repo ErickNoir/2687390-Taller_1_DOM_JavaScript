@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 5 - JavaScript</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navBar">
+            <h1 class="tittle">Retos de JavaScript</h1>
+    <div class="Options">
+            <a href="../index.html" class="letterNAV barOptions"><b>Inicio</b></a>
+    </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <br> <br> <br>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Reto 5</h2>
+            Recopile los nombres y apellidos de los instructores del trimestre, así como la actividad que orienta cada uno. Desarrolle un programa que le permita comprobar ¿cómo se llama el instructor y qué orienta? Permítale a un usuario seleccionar un elemento de una lista de nombres, otra lista de apellidos y una más de actividades. Si la selección del nombre, apellido y actividad es correcta, muéstrele un mensaje que diga La respuesta es correcta, de lo contrario La respuesta es incorrecta.
+        </div>
+        <div class="col-md-6">
+            <h5>Intructores</h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>Nombre:</h6>
+                    <select name="name" id="name" onchange="updated5()">
+                        <option value="1">Tatiana</option>
+                        <option value="2">Jennifer</option>
+                        <option value="3">Jonathan</option>
+                        <option value="4">Lorena</option>
+                        <option value="5">Margarita</option>
+                        <option value="6">Paula</option>
+                        <option value="7">Uldarico</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <h6>Apellido:</h6>
+                    <select name="lastName" id="lastName" onchange="updated5()">
+                        <option value="2">Fajardo</option>
+                        <option value="6">Romero</option>
+                        <option value="7">Andrade</option>
+                        <option value="5">Guarin</option>
+                        <option value="4">Medina</option>
+                        <option value="3">Espitia</option>
+                        <option value="1">Cabrera</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <h6>Materia:</h6>
+                    <select name="subject" id="subject" onchange="updated5()">
+                        <option value="2">Fundamentos JavaScript</option>
+                        <option value="3">Consultas SQL y NoSQL</option>
+                        <option value="2">Diseño de proyecto</option>
+                        <option value="5">Prototipado de interfaz</option>
+                        <option value="6">Emprenidmiento</option>
+                        <option value="1">Java avanzado</option>
+                        <option value="4">Comunicación</option>
+                        <option value="7">Python básico</option>
+                    </select>
+                </div>
+            </div>
+       
+
+            <button class="button2" onclick="verify()">Comprobar</button>
+
+        <br>
+        
+            <h5>Resultado:</h5>
+            <div id="resultField5"></div>
+            
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+<script src="../js/Retos.js"></script>
+
+<br> <br> <br> <br> <br>
+
+<footer class="bg-dark text-center text-white" >
+    <div class=" p-4 pb-0" style="background-color: #68270b">
+
+    </div>
+    <div class="text-center p-3" style="background-color:#4c000c"> 
+    © 2023 Copyright:
+        <a class="text-white" href="Index.html">Retos de JavaScript</a>
+    </div>
+</footer>
+
+</body>
+</html>

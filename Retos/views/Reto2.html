@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JavaScript</title>
+    <link rel="stylesheet" href="../css/reto2.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body onload="onLoad()" class="body">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navBar" >
+            <h1 class="tittle">Eventos de JavaScript</h1>
+            <div class="Options">
+                <a href="../index.html" class="letterNAV barOptions"><b>Inicio</b></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <br> <br> <br>
+    <div class="row" >
+        <div class="col-md-6">
+            <table border="1">
+                <thead>
+                <tr class="tableTittle">
+                    <td><h5 class="tittle" >N*</h5></td>
+                    <td><h5 class="tittle">Descripción</h5></td>
+                    <td><h5 class="tittle">Ejecutable</h5></td>
+                </tr>
+                </thead>
+
+                <tr>
+                    <td><p class="text">1</p></td>
+                    <td><p class="text">Detecta cuando tecleas dentro de un campo</p></td>
+                    <td><p class="text">Ingresa un texto: <input type="text" onkeypress="pressKey()"></p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">2</p></td>
+                    <td><p class="text">Detecta cuando presionas una tecla en especifico del teclado</p></td>
+                    <td><p class="text"> Prueba presionando la flecha izquierda y la derecha </p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">3</p></td>
+                    <td><p class="text">Detecta cuando presionas una tecla en especifico del teclado</p></td>
+                    <td><p class="text">Ingresa un texto: <input type="text" id="fname" onchange="upperCase()"></p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">4</p></td>
+                    <td><p class="text">Cuando el cursor está sobre un elemento</p></td>
+                    <td><p onmouseover="mOver(this)" onmouseout="mOut(this)" class="text">Si pones el mouse sobre mí...</p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">5</p></td>
+                    <td><p class="text">Detecta que las teclas estén activas para accionar el evento</p></td>
+                    <td><p class="text"><button id="button">Alt + Shift + ¡Click sobre mí!</button></p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">6</p></td>
+                    <td><p class="text">Detección del doble click</p></td>
+                    <td><div id="dobleClick"><p class="text">Has doble Click aquí...</p></div></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">7</p></td>
+                    <td><p class="text">Detectar cuando una ventana ha cambiado su tamaño</p></td>
+                    <td><p class="text">Cambia el tamaño de la ventana del navegador</p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">8</p></td>
+                    <td><p class="text">Detecta el click sostenido en un elemento</p></td>
+                    <td><p onmouseup="mouseUp()" onmousedown="mouseDown()" class="text">Sosten el click aquí</p></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">9</p></td>
+                    <td><p class="text">Detecta cuando mueves el mouse dentro de un elemento</p></td>
+                    <td><div onmousemove="moveCursor()"><p class="text">Mueve el mouse sobre mí</p></div></td>
+                </tr>
+
+                <tr>
+                    <td><p class="text">10</p></td>
+                    <td><p class="text">Detecta cuando escibes un texto en especifico</p></td>
+                    <td><p class="text">Escribe DOOM y recarga la página<input type="text" id="campo1" onchange="updateDoom()"></p></td>
+                </tr>
+            
+            </table>
+        </div>
+    
+        <div class="col-md-6">
+            <h4 class="tittle">Aquí verás algunos de los eventos: </h4>
+            <div class="actions" id="showActions">
+            </div>
+
+        </div>
+    </div>
+    
+    </div>
+
+
+    <script src="../js/reto2.js"></script>
+
+
+    <br> <br> <br> <br> <br>
+
+    <footer class="bg-dark text-center text-white" >
+        <div class=" p-4 pb-0" style="background-color:  #222640">
+
+        </div>
+        <div class="text-center p-3" style="background-color: #121726"> 
+            <p class="text"> © 2023 Copyright: <a class="text" href="Reto2.html">Eventos de JavaScript</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

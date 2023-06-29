@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1 - JavaScript</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navBar">
+            <h1 class="tittle">Retos de JavaScript</h1>
+    <div class="Options">
+            <a href="../index.html" class="letterNAV barOptions"><b>Inicio</b></a>
+    </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <br> <br> <br> <br> <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Reto 1</h2>
+                <p>Consulte el siguiente apartado del objeto String en JavaScript. Utilizando funciones de JavaScript desarrolle un programa en el que el usuario ingrese una palabra, pueda elegir entre las siguientes opciones:</p>
+                <ul>
+                    <li>La longitud de la palabra</li>
+                    <li>La palabra convertida en mayúsculas</li>
+                    <li>La palabra convertida en minúsculas</li>
+                    <li>El primer carácter de la palabra</li>
+                </ul>
+
+            </div>
+            <div class="col-md-6">
+                <h5>Ingresa un texto:</h5>
+                <input type="text" id="campoReto1" onchange="updated()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button onclick="countingCharacters()" class="button2">Contar caracteres</button>
+                        <button onclick="convertToUppercase()" class="button2">Converit en mayúsculas</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button onclick="convertToLowcase()" class="button2">Converit en minúsculas</button>
+                        <button onclick="takeFirstCharacter()" class="button2">Tomar primer caracter</button>
+                    </div>
+
+                </div>
+                
+                
+
+            <div class="viewEvent" id="viewEvent">
+
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/Retos.js"></script>
+
+    <br> <br> <br> <br> <br>
+
+    <footer class="bg-dark text-center text-white" >
+        <div class=" p-4 pb-0" style="background-color: #68270b">
+
+        </div>
+        <div class="text-center p-3" style="background-color:#4c000c"> 
+        © 2023 Copyright:
+            <a class="text-white" href="Index.html">Retos de JavaScript</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

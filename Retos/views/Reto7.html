@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 7 - JavaScript</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/cardsAndModals.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navBar">
+            <h1 class="tittle">Retos de JavaScript</h1>
+    <div class="Options">
+            <a href="../index.html" class="letterNAV barOptions"><b>Inicio</b></a>
+    </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <br> <br> <br> <br> <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Reto 7</h2>
+                <p>Construya un formulario para registro de usuario, que incluya los siguientes campos: </p>
+                <ul>
+                    <li>Tipo de documento => lista desplegable</li>
+                    <li>No. Documento => input tipo text</li>
+                    <li>Nombre => input tipo text</li>
+                    <li>Apellido => input tipo text</li>
+                    <li>Fecha Nacimiento => input type date</li>
+                    <li>Correo electrónico => input type text</li>
+                    <li>Password => input type password</li>
+                    <li>Comprobar password => input type password</li>
+                    <li>Aceptar Términos de uso => input type checkbox + botón que despliega en ventana
+                        modal los términos de uso</li>
+                </ul>
+                <p>Aplique las siguientes validaciones:</p>
+                <ul>
+                    <li>Todos los campos del formulario sean obligatorios (no puede quedar ningún
+                        campo sin seleccionar o diligenciar).</li>
+                    <li>El campo No. documento solo permita el ingreso de números y la longitud sea de
+                        mínimo 5 caracteres.</li>
+                    <li>Los campos Nombre y Apellido, deben admitir caracteres alfanuméricos.</li>
+                    <li>El campo fecha nacimiento debe contar con una restricción para evitar el ingreso
+                        de una fecha inferior al año 2002 (solo mayores de 18 años).</li>
+                    <li>El campo correo electrónico solo permita el ingreso de correos con el dominio
+                        @misena.edu.co</li>
+                    <li>El campo password debe incluir mínimo una letra mayúscula, un número, una letra
+                        minúscula, un carácter y debe ser mínimo de 10 caracteres.</li>
+                    <li>Comprobar que el password digitado y su confirmación son iguales.</li>
+                    <li>Se debe comprobar que sea ha chequeado el checkbox de aceptar Términos de uso.</li>
+                </ul>
+
+            </div>
+            <div class="col-md-6">
+                <form action="" class="form" id="formValidation" novalidate onsubmit="enviarFormulario()">
+                    <label>Tipo de Documento</label>
+                    <br>
+                    <select name="typeID" id="typeID">
+                        <option value="1">Cedula de ciudadanía</option>
+                        <option value="2">Tarjeta de identidad</option>
+                        <option value="3">Pasaporte</option>
+                    </select>
+
+                    <br>
+
+                    <div id="numberID">
+                        <label>Número de documento</label>
+                        <input type="text" name="fieldNumberID" id="fieldNumberID">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="namme">
+                        <label>Nombre</label>
+                        <input type="text" name="fieldNamme" id="fieldNamme">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="lastName">
+                        <label>Apellido</label>
+                        <input type="text" name="fieldLastName" id="fieldLastName">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="birth">
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" name="birthDate" id="birthDate" max="2002-01-01">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="email">
+                        <label>Correo electronico</label>
+                        <input type="text" name="fieldEmail" id="fieldEmail">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="password">
+                        <label>Contraseña</label>
+                        <input type="password" name="fieldPassword" id="fieldPassword">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="confirmPassword">
+                        <label>Confirmar contraseña</label>
+                        <input type="password" name="fieldConfirmPassword" id="fieldConfirmPassword">
+                        <div class="warning"></div>
+                    </div>
+
+                    <br>
+
+                    <div id="checkTerms">
+                        <label>Acepto <a onclick="openUseTerms()">términos y condicones</a></label>
+                        <input type="checkbox" name="checkboxTerms" id="checkboxTerms">
+                        <div class="warning"></div>
+                    </div>
+
+                    <button type="submit" name="send" value="Enviar" class="button2">Enviar</button>
+                </form>
+
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="modalWindowUseTerms" class="modalWindowUseTerms">
+        <div class="modalContent">
+            <h3>Términos y condicones</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+            <button class="button2" onclick="closeUseTerms()">Cerrar</button>
+        </div>
+        <br>
+            <br>
+            <br>
+    </div>
+
+    <script src="../js/reto7.js"></script>
+
+    <br> <br> <br> <br> <br>
+
+    <footer class="bg-dark text-center text-white" >
+        <div class=" p-4 pb-0" style="background-color: #68270b">
+
+        </div>
+        <div class="text-center p-3" style="background-color:#4c000c"> 
+        © 2023 Copyright:
+            <a class="text-white" href="Index.html">Retos de JavaScript</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

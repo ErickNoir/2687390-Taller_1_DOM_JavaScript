@@ -1,0 +1,55 @@
+.tittle {
+    font-weight: bold;
+    font-family: Candara Light;
+    color:#F2AF5C;
+    text-shadow: 1px 1px black, -2px 0px #BF4417;
+  }
+  
+  .body {
+    background-color: #1F203E;
+  }
+  
+  .navBar {
+    background-color: #121726;
+  }
+  
+  .barOptions {
+    margin-left: 50px;
+  }
+  
+  
+  .imagesFormat {
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  
+  .actions {
+    background-color: #BF9460;
+    font-family: Candara Light;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 10px;
+  
+  }
+  
+  thead {
+    text-align: center;
+    background-color: #921409;
+    font-weight: bold;
+  }
+  
+  table, tr, td {
+    border-color: #831208;
+  }
+  
+  .text {
+    padding: 10px;
+    color: #D9AA55;
+    text-align: center;
+  }
+  
+  .text:hover {
+    color: #D9AA55;
+    text-align: center;
+  }
